@@ -1,0 +1,14 @@
+{% extends 'Main/padre.html' %}
+{% load static %}
+{% block contenidoQueCambia %}
+
+<h2>Producto por Categoria</h2>
+    <form action="/Main/resultadoProducto" method="get">
+
+        <p>Inserte Categoria:<input type = "text"  name="categoria"  id="categoria"></p>
+
+        <input type="submit" value="Buscar">
+
+
+    </form>
+{% endblock %}

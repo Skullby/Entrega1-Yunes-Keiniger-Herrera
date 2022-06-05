@@ -1,0 +1,22 @@
+{% extends 'Main/padre.html' %}
+{% load static %}
+{% block contenidoQueCambia %}
+    <h1>Formulario - Agregar Usuario</h1>
+
+    {% if miForm.errors %}
+    <p style="color: red;" >Estan mal los datos, revisar</p>
+    {% endif %}
+    <td>
+        <form action="/Main/usuarioForm/" method="POST"> {% csrf_token %}
+                
+            <table>
+
+                {{ miForm.as_table }}
+
+            
+            </table>
+            <input type="submit" value="Enviar">
+        </form>
+    </td>
+
+{% endblock %}
